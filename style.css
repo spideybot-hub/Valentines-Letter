@@ -235,26 +235,113 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+    
     .title {
         font-size: 1.8em;
         margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    
+    .letter-container {
+        margin: 30px 0;
     }
     
     .envelope {
-        width: 250px;
-        height: 170px;
+        width: 280px;
+        height: 190px;
+    }
+    
+    .envelope:hover {
+        transform: scale(1.02);
+    }
+    
+    .envelope-body {
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+    }
+    
+    .letter-content {
+        padding: 20px;
     }
     
     .letter-paper {
         width: 95%;
-        padding: 30px;
+        max-width: 100%;
+        padding: 25px 20px;
+        border-radius: 3px;
     }
     
-    .letter-text p {
-        font-size: 1em;
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 28px;
+        padding: 5px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .letter-text {
+        text-align: left;
     }
     
     .letter-text h2 {
         font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    .letter-text p {
+        font-size: 1em;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    .instruction {
+        font-size: 1em;
+        margin-top: 20px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    
+    .envelope {
+        width: 240px;
+        height: 160px;
+    }
+    
+    .envelope-body::before {
+        font-size: 50px;
+    }
+    
+    .letter-paper {
+        padding: 20px 15px;
+    }
+    
+    .letter-text h2 {
+        font-size: 1.3em;
+    }
+    
+    .letter-text p {
+        font-size: 0.95em;
+        margin-bottom: 12px;
+    }
+    
+    .letter-text p.signature {
+        font-size: 0.9em;
+        margin-top: 25px;
     }
 }
